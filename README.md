@@ -11,7 +11,7 @@ a comprehensive universal data type system
 <br>
 
 C/C++ data types
-```c
+```
     VOID, Void, void
 
     BOOL, Bool, bool        // values TRUE, True, true, FALSE, False, false
@@ -31,7 +31,7 @@ C/C++ data types
     FLOATLONG,   FloatLong,   floatlong     // long double
 
     CHAR, Char, char
-    WCHAR, WChar, wchar
+    WCHAR, WChar, wchar     // since C95/C++98
 ```
 
 and conversion macros - get
@@ -60,7 +60,7 @@ and conversion macros - make
 
 
 WORD data types
-```c
+```
     WORD8,  Word8,  word8   //  8 bit data types
     WORD16, Word16, word16  // 16 bit data types
     WORD32, Word32, word32  // 32 bit data types
@@ -93,7 +93,7 @@ and conversion macros - make
 
 
 CPU data types
-```c
+```
     BYTE,  Byte,  byte      //  8 bit data type
     WORD,  Word,  word      // 16 bit data type
     DWORD, DWord, dword     // 32 bit data type

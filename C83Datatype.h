@@ -18,12 +18,12 @@
 
 
 
-#include "TVoid.h" /* OK, only desrciption to create */
-#include "TBool.h" /* OK */
-#include "TInteger.h" /* OK */
-#include "TFloat.h" /* OK */
-#include "TChar.h" /* OK */
-#include "TWord.h" /* OK */
+#include "TVoid.h"
+#include "TBool.h"
+#include "TInteger.h"
+#include "TFloat.h"
+#include "TChar.h"
+#include "TWord.h"
 #include "TCpu.h"
 
 
