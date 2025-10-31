@@ -1,12 +1,12 @@
 # C83Datatype
 
+## A comprehensive universal data type system for C and C++
+
 3rd edition of the library
 
 part of the C83Project<br>
 support for 8.3 file naming conventions with the exception of the main include and code files<br>
 support C89 and higher editions<br>
-
-a comprehensive universal data type system
 
 <br>
 
