@@ -6,7 +6,7 @@
 *            https://github.com/ignackodotcom
 * \copyright Copyright (c) 1994 - 2026
 *            MIT License (see License.txt file)
-* \brief     Datatype definitions library
+* \brief     A comprehensive universal data type system for C and C++ library
 * \details
 *
 * \see       https://github.com/ignackodotcom
