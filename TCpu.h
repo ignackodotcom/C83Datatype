@@ -73,15 +73,15 @@ typedef  UINT64					qword;
 /******************************************************************************
 **  cpu data types basic operations make
 */
-#define MAKEBYTE(hi,lo)			((BYTE)((((BYTE)hi) << 4) | (lo)))
+#define MAKEBYTE(hi,lo)			((BYTE)((((BYTE)(hi)) << 4) | (lo)))
 
-#define MAKEWORD(hi,lo)			((WORD)((((WORD)hi) << 8 ) | (lo)))
+#define MAKEWORD(hi,lo)			((WORD)((((WORD)(hi)) << 8 ) | (lo)))
 
-#define MAKEDWORD(hi,lo)		((DWORD)((((DWORD)hi) << 16 ) | (lo)))
+#define MAKEDWORD(hi,lo)		((DWORD)((((DWORD)(hi)) << 16 ) | (lo)))
 
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L
 
-#define MAKEQWORD(hi,lo)		((QWORD)((((QWORD)hi) << 32 ) | (lo)))
+#define MAKEQWORD(hi,lo)		((QWORD)((((QWORD)(hi)) << 32 ) | (lo)))
 
 #endif /*  defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L */
 

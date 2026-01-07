@@ -64,20 +64,20 @@
 	/* C++03/C++98 and lower */
 	#if __cplusplus <= 199711L
 
-		typedef  char				Int8;
+		typedef  signed char		Int8;
 		typedef  unsigned char		UInt8;
 
-		typedef  short				Int16;
+		typedef  signed short		Int16;
 		typedef  unsigned short		UInt16;
 
 		#if ULONG_MAX == 0xFFFFFFFFUL
 
-			typedef  long           Int32;
+			typedef  signed long    Int32;
 			typedef  unsigned long  UInt32;
 
 		#else
 
-			typedef  int            Int32;
+			typedef  signed int     Int32;
 			typedef  unsigned int   UInt32;
 
 		#endif
@@ -106,20 +106,20 @@
 	/* C95 and lower */
 	#if !defined(__STDC_VERSION__) || __STDC_VERSION__ <= 199409L
 
-		typedef  char				Int8;
+		typedef  signed char		Int8;
 		typedef  unsigned char		UInt8;
 
-		typedef  short				Int16;
+		typedef  signed short		Int16;
 		typedef  unsigned short		UInt16;
 
 		#if ULONG_MAX == 0xFFFFFFFFUL
 
-			typedef  long           Int32;
+			typedef  signed long    Int32;
 			typedef  unsigned long  UInt32;
 
 		#else
 
-			typedef  int            Int32;
+			typedef  signed int     Int32;
 			typedef  unsigned int   UInt32;
 
 		#endif
@@ -210,15 +210,15 @@ typedef     UInt32				UINT32;
 /******************************************************************************
 **  C data types basic operations make
 */
-#define MAKEUINT8(hi,lo)		((UINT8)((((UINT8)hi) << 4) | ((UINT8)(lo))))
+#define MAKEUINT8(hi,lo)		((UINT8)((((UINT8)(hi)) << 4) | ((UINT8)(lo))))
 
-#define MAKEUINT16(hi,lo)		((UINT16)((((UINT16)hi) << 8 ) | ((UINT16)(lo))))
+#define MAKEUINT16(hi,lo)		((UINT16)((((UINT16)(hi)) << 8 ) | ((UINT16)(lo))))
 
-#define MAKEUINT32(hi,lo)		((UINT32)((((UINT32)hi) << 16 ) | ((UINT32)(lo))))
+#define MAKEUINT32(hi,lo)		((UINT32)((((UINT32)(hi)) << 16 ) | ((UINT32)(lo))))
 
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L
 
-#define MAKEUINT64(hi,lo)		((UINT64)((((UINT64)hi) << 32 ) | ((UINT64)(lo))))
+#define MAKEUINT64(hi,lo)		((UINT64)((((UINT64)(hi)) << 32 ) | ((UINT64)(lo))))
 
 #endif /*  defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L */
 

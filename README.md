@@ -128,4 +128,6 @@ and conversion macros - make
 # Updates
 2025 11 02 Detailed description<br>
 2025 11 19 This readme.md updated, C style comments added<br>
+2026 01 07 C89 signed ints defined implicitly using the keyword signed<br>
+2026 01 07 hi parameter in make macros enclosed in parentheses ()<br>
 <br>
