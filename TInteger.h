@@ -210,15 +210,15 @@ typedef     UInt32				UINT32;
 /******************************************************************************
 **  C data types basic operations make
 */
-#define MAKEUINT8(hi,lo)		((UINT8)((((UINT8)(hi)) << 4) | ((UINT8)(lo))))
+#define MAKEUINT8(hi,lo)		((UINT8)((((UINT8)(hi)) << 4) | ((UINT8)(lo) & (UINT8)0x0F)))
 
-#define MAKEUINT16(hi,lo)		((UINT16)((((UINT16)(hi)) << 8 ) | ((UINT16)(lo))))
+#define MAKEUINT16(hi,lo)		((UINT16)((((UINT16)(hi)) << 8) | ((UINT16)(lo) & (UINT16)0x00FF)))
 
-#define MAKEUINT32(hi,lo)		((UINT32)((((UINT32)(hi)) << 16 ) | ((UINT32)(lo))))
+#define MAKEUINT32(hi,lo)		((UINT32)((((UINT32)(hi)) << 16) | ((UINT32)(lo) & (UINT32)0x0000FFFF)))
 
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L
 
-#define MAKEUINT64(hi,lo)		((UINT64)((((UINT64)(hi)) << 32 ) | ((UINT64)(lo))))
+#define MAKEUINT64(hi,lo)		((UINT64)((((UINT64)(hi)) << 32) | ((UINT64)(lo) & (UINT64)0x00000000FFFFFFFF)))
 
 #endif /*  defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L */
 

@@ -20,6 +20,10 @@
 
 
 
+#include "TInteger.h"
+
+
+
 /******************************************************************************
 **  cpu basic data types
 */
@@ -73,15 +77,15 @@ typedef  UINT64					qword;
 /******************************************************************************
 **  cpu data types basic operations make
 */
-#define MAKEBYTE(hi,lo)			((BYTE)((((BYTE)(hi)) << 4) | (lo)))
+#define MAKEBYTE(hi,lo)			((BYTE)((((BYTE)(hi)) << 4) | ((BYTE)(lo) & (BYTE)0x0F)))
 
-#define MAKEWORD(hi,lo)			((WORD)((((WORD)(hi)) << 8 ) | (lo)))
+#define MAKEWORD(hi,lo)			((WORD)((((WORD)(hi)) << 8) | ((WORD)(lo) & (WORD)0x00FF)))
 
-#define MAKEDWORD(hi,lo)		((DWORD)((((DWORD)(hi)) << 16 ) | (lo)))
+#define MAKEDWORD(hi,lo)		((DWORD)((((DWORD)(hi)) << 16) | ((DWORD)(lo) & (DWORD)0x0000FFFF)))
 
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L
 
-#define MAKEQWORD(hi,lo)		((QWORD)((((QWORD)(hi)) << 32 ) | (lo)))
+#define MAKEQWORD(hi,lo)		((QWORD)((((QWORD)(hi)) << 32) | ((QWORD)(lo) & (QWORD)0x00000000FFFFFFFF)))
 
 #endif /*  defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L */
 

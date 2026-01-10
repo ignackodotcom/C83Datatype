@@ -20,6 +20,10 @@
 
 
 
+#include "TInteger.h"
+
+
+
 /******************************************************************************
 **  Word basic data types
 */
@@ -69,15 +73,15 @@ typedef  UINT64					word64;
 /******************************************************************************
 **  Word data types basic operations make
 */
-#define MAKEWORD8(hi,lo)		((WORD8)((((WORD8)(hi)) << 4) | (lo)))
+#define MAKEWORD8(hi,lo)		((WORD8)((((WORD8)(hi)) << 4) | ((WORD8)(lo) & (WORD8)0x0F)))
 
-#define MAKEWORD16(hi,lo)		((WORD16)((((WORD16)(hi)) << 8 ) | (lo)))
+#define MAKEWORD16(hi,lo)		((WORD16)((((WORD16)(hi)) << 8) | ((WORD16)(lo) & (WORD16)0x00FF)))
 
-#define MAKEWORD32(hi,lo)		((WORD32)((((WORD32)(hi)) << 16 ) | (lo)))
+#define MAKEWORD32(hi,lo)		((WORD32)((((WORD32)(hi)) << 16) | ((WORD32)(lo) & (WORD32)0x0000FFFF)))
 
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L
 
-#define MAKEWORD64(hi,lo)		((WORD64)((((WORD64)(hi)) << 32 ) | (lo)))
+#define MAKEWORD64(hi,lo)		((WORD64)((((WORD64)(hi)) << 32) | ((WORD64)(lo) & (WORD64)0x00000000FFFFFFFF)))
 
 #endif /*  defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L || defined(__cplusplus) && __cplusplus >= 201103L */
 
