@@ -1,12 +1,12 @@
 /******************************************************************************
 * \file      C83Datatype.h
-* \version   2026.01.01
+* \version   2026.01.21 26.00.02.01
 * \author    Peter Potrok ( @ignackodotcom )
 *            ignacko.com@outlook.com
 *            https://github.com/ignackodotcom
 * \copyright Copyright (c) 1994 - 2026
 *            MIT License (see License.txt file)
-* \brief     A comprehensive universal data type system for C and C++ library
+* \brief     An universal data type system for C and C++ library
 * \details
 *
 * \see       https://github.com/ignackodotcom
@@ -14,17 +14,29 @@
 ******************************************************************************/
 
 #ifndef C83DATATYPE_H
-#define C83DATATYPE_H       20260101L
+#define C83DATATYPE_H
 
 
 
-#include "TVoid.h"
-#include "TBool.h"
-#include "TInteger.h"
-#include "TFloat.h"
-#include "TChar.h"
-#include "TWord.h"
-#include "TCpu.h"
+#include "TPVoid.h"
+#include "TPBool.h"
+#include "TPInt.h"
+#include "TPFloat.h"
+#include "TPChar.h"
+#include "TPCpu.h"
+#include "TPReg.h"
+
+
+
+/******************************************************************************
+* version date format YYYYMMDD
+*/
+#define C83DATATYPE_VERSION_DATE	20260121L
+
+/******************************************************************************
+* version number format XXYYZZWW
+*/
+#define C83DATATYPE_VERSION_NUMBER  26000201L
 
 
 
@@ -32,6 +44,7 @@
 extern "C" {
 #endif
 
+    long C83DATATYPE_DATE(void);
     long C83DATATYPE_VERSION(void);
 
 #ifdef __cplusplus
